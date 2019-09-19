@@ -13,6 +13,7 @@ fixtrx() {
 
 case "$board" in
 mynet-rext |\
+e2100l |\
 wrt160nl)
 	fixtrx
 	;;

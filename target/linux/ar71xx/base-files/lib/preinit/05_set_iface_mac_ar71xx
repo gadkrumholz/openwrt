@@ -38,6 +38,9 @@ preinit_set_mac_address() {
 			mac_wan=$(mtd_get_mac_binary caldata 6)
 			[ -n "$mac_wan" ] && ifconfig eth0 hw ether "$mac_wan"
 			;;
+		e2100l)
+			fetch_mac_from_mtd nvram lan_hwaddr wan_hwaddr
+			;;
 		wrt160nl)
 			fetch_mac_from_mtd nvram lan_hwaddr wan_hwaddr
 			;;
